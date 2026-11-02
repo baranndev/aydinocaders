@@ -1,0 +1,56 @@
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Ogrenci
+    {
+        public string Ad { get; set; }
+        public string Soyad { get; set; }
+        public int Puan { get; set; }
+
+        public Ogrenci(string ad, string soyad, int puan)
+        {
+            Ad = ad;
+            Soyad = soyad;
+            Puan = puan;
+        }
+
+
+        public void BursHesapla()
+        {
+            if (Puan < 500)
+            {
+                Console.WriteLine("Hata! Puanınız yeterli değil.");
+            }
+            else
+            {
+                double bursOrani = 0.6;
+
+                Console.WriteLine("Tebrikler " + Ad + " " + Soyad);
+                Console.WriteLine("%60 burs kazandınız.");
+                Console.WriteLine("Burs oranınız: " + bursOrani);
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Sisteme Hoşgeldiniz");
+
+            Console.Write("Adınız: ");
+            string ad = Console.ReadLine();
+
+            Console.Write("Soyadınız: ");
+            string soyad = Console.ReadLine();
+
+            Console.Write("YKS Puanınız: ");
+            int puan = Convert.ToInt32(Console.ReadLine());
+
+            Ogrenci ogrenci1 = new Ogrenci(ad, soyad, puan);
+            ogrenci1.BursHesapla();
+        }
+    }
+}
