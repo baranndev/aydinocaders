@@ -1,36 +1,41 @@
-
 using System;
-
-namespace ConsoleApp1
+namespace ConsoleApp2
 {
-    class Ogrenci
+    public class Ögrenci
     {
-        public string Ad { get; set; }
-        public string Soyad { get; set; }
-        public int Puan { get; set; }
+        public string Name { get; set; }
 
-        public Ogrenci(string ad, string soyad, int puan)
+        public string LastName { get; set; }
+
+        public int puan { get; set; }
+
+        public Ögrenci(string name, string lastName, int puan)
         {
-            Ad = ad;
-            Soyad = soyad;
-            Puan = puan;
+            Name = name;
+            LastName = lastName;
+            this.puan = puan; // this kullanarak sınıftaki değişkene atama yapıldı
         }
 
-
-        public void BursHesapla()
+        public bool BursDurumu()
         {
-            if (Puan < 500)
-            {
-                Console.WriteLine("Hata! Puanınız yeterli değil.");
-            }
-            else
-            {
-                double bursOrani = 0.6;
+            return puan > 500;
+        }
+    }
 
-                Console.WriteLine("Tebrikler " + Ad + " " + Soyad);
-                Console.WriteLine("%60 burs kazandınız.");
-                Console.WriteLine("Burs oranınız: " + bursOrani);
+    public class BursOrani
+    {
+        public double bursOraniHesapla(Ögrenci ogrenci)
+        {
+            if (ogrenci.puan > 500 && ogrenci.puan < 550)
+            {
+                return 0.50;
             }
+            else if (ogrenci.puan > 550)
+            {
+                return 0.75;
+            }
+
+            return 0; 
         }
     }
 
@@ -39,18 +44,27 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Sisteme Hoşgeldiniz");
-
-            Console.Write("Adınız: ");
+            Console.Write("Adınız :");
             string ad = Console.ReadLine();
-
-            Console.Write("Soyadınız: ");
+            Console.Write("Soyadınız:");
             string soyad = Console.ReadLine();
-
-            Console.Write("YKS Puanınız: ");
+            Console.Write("YKS PUANI: ");
             int puan = Convert.ToInt32(Console.ReadLine());
 
-            Ogrenci ogrenci1 = new Ogrenci(ad, soyad, puan);
-            ogrenci1.BursHesapla();
+            Ögrenci yeniÖğrenci = new Ögrenci(ad, soyad, puan);
+
+            if (!yeniÖğrenci.BursDurumu())
+            {
+                Console.WriteLine("Hata Burs İçin Puanınız Yeterli Değil");
+            }
+
+            BursOrani ogrBurs = new BursOrani();
+            double burs = ogrBurs.bursOraniHesapla(yeniÖğrenci);
+
+            if (burs > 0)
+            {
+                Console.WriteLine($"Tebrikler: %{(burs * 100)} burs kazandınız.");
+            }
         }
     }
 }
