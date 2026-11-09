@@ -1,0 +1,23 @@
+Euler teorimini öğren ve bu graf öğren teorimine uygun mu değil mi onu öğren 
+Yönlü yönsüz grafik kapsayan ağaç nedir ?  Döngü olmayacak ve graftaki tüm içerikleri içerecek
+Minimum kapsayan ağaç çıkabilir ve Yukarıdaki grafın kapsayan ağacı çizin ve minimum kapsayan ağaxı bulun.
+GRAF TEORİSİ 
+
+OOP (Object-Oriented Programming) 
+HAYVANLAR CLASS OLUŞTURUN TÜRÜ OLSUN ADI OLSUN VE BU HAYVANLARIN CONSTRAT METODU OLUŞTURUN SONRA BU SINIFTAN BİR NESNE OLUŞTURUN GELEBİLİR
+SINIFLAR FARKLI OLABİLİR ARAÇ HAYVAN
+
+ARAÇ SINIFI OLUŞTURUN ARACIN TÜR SONRA BU SINIFIN CONSTRAT METODU OLUŞTURUN :
+public araç string {tür} marka 
+bunun türü ne ? = X tür markası markasına bide modeline de x olsun bunu dedik bu constrat metodu sonra dediki bu sınıftan nesne oluşturun 
+Araç = benim aracım new araç (slayt 4) 
+
+Bu sınavda public privte derki bu öğrenci sınıfın ismi bölümü erişebilen bölümü olsun ve diğerleri de notu diğer  bölümler erişemesin 
+
+Inheritance - Miras oop kalıtımı sorabilir 
+
+
+C#
+
+POLİNDROM SAYI AMSTRONG SAYI GİRİLEN BİR SAYININ 67 GİRDİN 6.7 OLUR VEYA BUNUN ALGORİTMA GİRDİN ÇIKTI NE YAPAR ADIM ADIM ÇALIŞTIRIN SONRA BİDE ARRAYLER SORABİLİR Notlar var 3 tane o notun ortlaması 50 den küçükse kalmak üzeresin 50 den büyükse de tebriler geçtiniz versin
+Sensörden gelen nem verisi saat başı nem ölçülmektedir son 5 nemin ortlaması sisteme girildi eğer 50 üzerindeyse veya altındaysa yazan c# kodu 
